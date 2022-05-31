@@ -8,7 +8,7 @@ public class movement : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
-    public GameObject winTextObject;
+    public TextMeshProUGUI winTextObject;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -20,7 +20,7 @@ public class movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
-        winTextObject.SetActive(false);
+        object = winTextObject.SetActive(false);
     }
 
     private void OnMove(InputValue movementValue)
@@ -33,7 +33,7 @@ public class movement : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
+        countText.text = count + 1;
         if (count >= 1)
         {
             winTextObject.SetActive(true);

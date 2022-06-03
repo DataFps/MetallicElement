@@ -20,7 +20,7 @@ public class movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
-        object = winTextObject.SetActive(false);
+        winTextObject.SetActive(false);
     }
 
     private void OnMove(InputValue movementValue)
